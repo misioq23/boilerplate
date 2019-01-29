@@ -1,0 +1,16 @@
+//Blocking inner text to move and select
+@mixin text__selection--none {
+	//for iOS Safari
+	-webkit-touch-callout: none;
+	//Non-prefixed version, currently supported by Chrome and Opera
+	user-select: none;
+}
+
+//Blocking image to move
+@mixin img__drag--none {
+	-webkit-user-drag: none;
+	-khtml-user-drag: none;
+	-moz-user-drag: none;
+	-o-user-drag: none;
+	user-drag: none;
+}

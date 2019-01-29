@@ -1,0 +1,17 @@
+@mixin small() {
+    @media only screen and (min-width: $mq__small) {
+        @content;
+    }
+}
+
+@mixin medium() {
+    @media only screen and (min-width: $mq__medium) {
+        @content;
+    }
+}
+
+@mixin large() {
+    @media only screen and (min-width: $mq__large) {
+        @content;
+    }
+}

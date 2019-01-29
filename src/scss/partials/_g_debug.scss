@@ -1,0 +1,27 @@
+@import "mixins/media_queries";
+
+$border: rem(5);
+
+html {
+    border-width: $border;
+    border-style: solid;
+    border-color: blue;
+
+    @include small {
+        border-width: $border;
+        border-style: solid;
+        border-color: green;
+    }
+
+    @include medium {
+        border-width: $border;
+        border-style: solid;
+        border-color: yellow;
+    }
+
+    @include large {
+        border-width: $border;
+        border-style: solid;
+        border-color: purple;
+    }
+}

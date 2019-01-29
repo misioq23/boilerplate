@@ -1,0 +1,24 @@
+// hack by centrowac element fixed nie działa w IE6/7
+@mixin center__fix {
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+}
+
+@mixin center__standard {
+	margin: 0 auto;
+}
+
+@mixin center__transform ($horizontal : 50%, $vertical : 50%) {
+	position: absolute;
+
+	@if $vertical > 0 {
+		top: $vertical;
+	}
+
+	@if $horizontal > 0 {
+		left: $horizontal;
+	}
+
+	transform: translate(-$horizontal, -$vertical);
+}
