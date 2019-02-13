@@ -8,7 +8,6 @@ export default {
 		port: 3000
 	},
 	
-
 	src: {
 		html: 'src/markup/*.html',
 		scss: 'src/scss/**/*.scss',
@@ -19,13 +18,14 @@ export default {
 	build: {
 		html: 'build/',
 		css: 'build/css/',
-		js: 'build/js/',
+		js: 'build/js/bundle.js',
 		img: 'build/img/',
 	},
 
 	browsersList: [
-    'last 1 version',
-    '> 0.001% in PL',
-	'ie > 8',
+		'chrome > 70'
+		// 'last 1 version',
+		// '> 0.001% in PL',
+		// 'ie > 8',
   ]
 };
