@@ -31,7 +31,7 @@
 		"object-curly-spacing": [ 2, "always" ],
 		"computed-property-spacing": [ 2, "never" ],
 		"space-in-parens": [ 2, "never" ],
-		"space-before-function-paren": [ 2, "never" ],
+		"space-before-function-paren": [ "error", { "anonymous": "never", "named": "never", "asyncArrow": "always" } ],
 		"generator-star-spacing": [ 2, "after" ],
 		"yield-star-spacing": [ 2, "after" ],
 		"space-infix-ops": 2,
