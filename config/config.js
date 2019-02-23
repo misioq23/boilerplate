@@ -1,16 +1,16 @@
 /* gulp-config.js */
 export default {
-	
+
 	serv: {
 		server: {
 			baseDir: 'build/'
 		},
 		port: 3000
 	},
-	
+
 	src: {
 		html: 'src/markup/*.html',
-		scss: 'src/scss/**/*.scss',
+		scss: 'src/scss/**/**/*.scss',
 		js: 'src/scripts/**/*.js',
 		img: 'src/images/*.{jpg,svg,png}',
 	},
@@ -27,5 +27,5 @@ export default {
 		// 'last 1 version',
 		// '> 0.001% in PL',
 		// 'ie > 8',
-  ]
+	]
 };

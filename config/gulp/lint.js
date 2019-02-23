@@ -2,7 +2,7 @@ import gulp from 'gulp';
 import eslint from 'gulp-eslint';
 
 import configEsLint from '../eslint/default';
-import config from './config';
+import config from '../config';
 // esLint
 const esLint = () => {
 

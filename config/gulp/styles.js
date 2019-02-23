@@ -3,8 +3,7 @@ import gulp from 'gulp';
 import sass from 'gulp-sass';
 import sourcemaps from 'gulp-sourcemaps';
 
-import esLint from './lint';
-import config from './config';
+import config from '../config';
 
 // SCSS task
 const scss = () => {

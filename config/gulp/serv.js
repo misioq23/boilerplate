@@ -1,11 +1,17 @@
 import browsersync from 'browser-sync';
-import gulp from 'gulp';
 
-import config from './config';
+import jsonServ from '../server/default';
+import config from '../config';
 
 // BrowserSync
 const browserSync = (done) => {
 	browsersync.init(config.serv);
+	done();
+}
+
+//BrowserSync with JSON
+const browserSyncJSON = (done) => {
+	browsersync.init(config.serv, jsonServ);
 	done();
 }
 
@@ -15,4 +21,4 @@ const browserSyncReload = (done) => {
 	done();
 }
 
-export { browserSync, browserSyncReload }
+export { browserSyncJSON, browserSync, browserSyncReload }

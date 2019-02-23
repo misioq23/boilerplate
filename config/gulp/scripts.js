@@ -1,6 +1,4 @@
-import gulp from 'gulp';
 import { rollup } from 'rollup';
-import sourcemaps from 'gulp-sourcemaps';
 
 import configRollup from '../rollup/default';
 
