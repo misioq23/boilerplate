@@ -3,7 +3,7 @@ import replace from 'rollup-plugin-replace';
 import resolve from 'rollup-plugin-node-resolve';
 import convertCJS from 'rollup-plugin-commonjs';
 
-import config from '../gulp/config';
+import config from '../config';
 
 // rollup.config.js
 export default {

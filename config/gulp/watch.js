@@ -1,12 +1,12 @@
 import gulp from 'gulp';
-import {browserSyncReload} from './serv';
+import { browserSyncReload } from './serv';
 import htmlBuild from './markup';
 import scss from './styles';
 import jsBundle from './scripts';
 import imgBuild from './img';
 import esLint from './lint';
 
-import config from './config';
+import config from '../config';
 
 // Watch files
 const watchFiles = () => {

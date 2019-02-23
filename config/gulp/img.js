@@ -1,5 +1,5 @@
 import gulp from 'gulp';
-import config from './config';
+import config from '../config';
 
 const imgBuild = () => {
 	return gulp.src(config.src.img)

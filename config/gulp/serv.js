@@ -1,16 +1,7 @@
 import browsersync from 'browser-sync';
-import jsonServer from 'json-server';
 
-import config from './config';
-
-const jsonServ = (err, bs) => {
-	// access the browserSync connect instance
-	const server = jsonServer.create();
-	server.use(jsonServer.defaults());
-	server.use(jsonServer.router('config/server/db.json'));
-
-	bs.app.use(server);
-}
+import jsonServ from '../server/default';
+import config from '../config';
 
 // BrowserSync
 const browserSync = (done) => {
