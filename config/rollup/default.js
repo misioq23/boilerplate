@@ -30,6 +30,7 @@ export default {
 	],
 	output: {
 		file: config.build.js,
-		format: 'umd'
+		sourcemap: true,
+		format: config.build.bundleFormat
 	}
 };

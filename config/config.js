@@ -8,6 +8,10 @@ export default {
 		port: 3000
 	},
 
+	json: {
+		dir: 'config/server/db.json'
+	},
+
 	src: {
 		html: 'src/markup/*.html',
 		scss: 'src/scss/**/**/*.scss',
@@ -20,6 +24,7 @@ export default {
 		css: 'build/css/',
 		js: 'build/js/bundle.js',
 		img: 'build/img/',
+		bundleFormat: 'iife'
 	},
 
 	browsersList: [

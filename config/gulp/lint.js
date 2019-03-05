@@ -5,7 +5,6 @@ import configEsLint from '../eslint/default';
 import config from '../config';
 // esLint
 const esLint = () => {
-
 	return gulp.src(config.src.js)
 		.pipe(eslint(configEsLint))
 		.pipe(eslint.format())
