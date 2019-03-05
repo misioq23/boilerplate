@@ -24,6 +24,7 @@ export default {
 		css: 'build/css/',
 		js: 'build/js/bundle.js',
 		img: 'build/img/',
+		bundleFormat: 'iife'
 	},
 
 	browsersList: [
