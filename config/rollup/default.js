@@ -30,6 +30,7 @@ export default {
 	],
 	output: {
 		file: config.build.js,
+		name: config.build.name,
 		sourcemap: true,
 		format: config.build.bundleFormat
 	}
