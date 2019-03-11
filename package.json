@@ -28,12 +28,12 @@
 		"sinon": "^7.2.7"
 	},
 	"scripts": {
-		"karma": "karma start config/karma/default.js",
+		"karma": "karma start ./config/karma/default.js",
 		"lint": "eslint -c config/eslint/default.json src/**/*.js",
 		"build": "npm run lint && rollup -c config/rollup/default.js",
 		"server": "json-server --watch config/server/db.json --port 8080",
 		"pretest": "npm run build",
-		"test": "karma start"
+		"test": "npm run karma"
 	},
 	"author": "misioq23",
 	"license": "MIT",
