@@ -30,7 +30,7 @@
 		"sinon-chai": "^3.3.0"
 	},
 	"scripts": {
-		"karma": "karma start ./config/karma/default.js",
+		"karma": "karma start ./config/karma/default.js --single-run",
 		"lint": "eslint -c config/eslint/default.json src/**/*.js",
 		"build": "npm run lint && rollup -c config/rollup/default.js",
 		"server": "json-server --watch config/server/db.json --port 8080",
