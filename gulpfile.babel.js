@@ -9,8 +9,7 @@ import { browserSync, browserSyncJSON } from './config/gulp/serv';
 // define complex tasks
 const karma = () => {
 	const server = new Server({
-		configFile: __dirname + '/config/karma/default.js',
-		singleRun: false
+		configFile: __dirname + '/config/karma/default.js'
 	})
 	server.start()
 };
