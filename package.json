@@ -34,7 +34,7 @@
 	},
 	"scripts": {
 		"karma": "karma start ./config/karma/default.js --single-run",
-		"karma:rollup": "karma start ./config/karma/default2.js",
+		"karma:rollup": "karma start ./config/karma/karmaRollup.js",
 		"lint": "eslint -c config/eslint/default.json src/**/*.js",
 		"build": "npm run lint && rollup -c config/rollup/default.js",
 		"server": "json-server --watch config/server/db.json --port 8080",

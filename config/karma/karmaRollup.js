@@ -1,6 +1,9 @@
 // Karma configuration
 // Generated on Mon Mar 11 2019 20:50:45 GMT+0100 (GMT+01:00)
-
+const babel = require('rollup-plugin-babel');
+const replace = require('rollup-plugin-replace');
+const resolve = require('rollup-plugin-node-resolve');
+const convertCJS = require('rollup-plugin-commonjs');
 module.exports = function (config) {
 	config.set({
 		plugins: [
@@ -24,10 +27,29 @@ module.exports = function (config) {
 		},
 
 		rollupPreprocessor: {
-			plugins: [],
+			plugins: [
+				replace({
+					'process.env.NODE_ENV': '"production"',
+				}), babel({
+					exclude: 'node_modules/**',
+					babelrc: false,
+					presets: [
+						['@babel/env',
+							{
+								targets: ['chrome > 70'],
+								useBuiltIns: 'usage'
+							}
+						]
+					]
+				}), resolve({
+					jsnext: true,
+					preferBuiltins: true,
+					browser: true
+				}), convertCJS()
+			],
 			output: {
-				format: 'iife',
-				sourcemap: 'inline'
+				sourcemap: true,
+				format: 'iife'
 			}
 		},
 		port: 9876,
