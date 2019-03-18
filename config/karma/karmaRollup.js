@@ -17,6 +17,7 @@ module.exports = function (config) {
 		frameworks: ['mocha', 'sinon-chai'],
 		browsers: ['ChromeHeadless'],
 		reporters: ['mocha', 'coverage'],
+		failOnEmptyTestSuite: false,
 
 		basePath: '../../',
 		files: [{ pattern: "test/*.js", watched: false }],
@@ -54,7 +55,7 @@ module.exports = function (config) {
 		},
 		port: 9876,
 		colors: true,
-		logLevel: config.LOG_INFO,
+		logLevel: config.LOG_ERROR,
 		autoWatch: false,
 		singleRun: true,
 		concurrency: Infinity,

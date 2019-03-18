@@ -1,10 +1,14 @@
 import { Server } from 'karma';
 const karma = (done) => {
-	Server.start({
-		configFile: require('path').resolve('./config/karma/karmaRollup.js')
-	}, () => {
-		done();
-	});
+	new Server({
+		configFile: require('path').resolve('./config/karma/karmaRollup.js'),
+	}, (err) => {
+		if (err) {
+			done('Karma error!');
+		} else {
+			done();
+		}
+	}).start();
 };
 
 export default karma;
