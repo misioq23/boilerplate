@@ -29,8 +29,8 @@ export default {
 	},
 
 	browsersList: [
-		'chrome > 70'
-		// 'last 1 version',
+		'last 1 version',
+		// 'chrome > 70',
 		// '> 0.001% in PL',
 		// 'ie > 8',
 	]
