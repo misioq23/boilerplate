@@ -11,21 +11,24 @@ export default {
 	plugins: [
 		replace({
 			'process.env.NODE_ENV': '"production"',
+		}), resolve({
+			jsnext: true,
+			preferBuiltins: true,
+			browser: true
 		}), babel({
 			exclude: 'node_modules/**',
+			plugins: ['@babel/plugin-transform-runtime'],
 			babelrc: false,
+			runtimeHelpers: true,
 			presets: [
 				['@babel/env',
 					{
+						debug: true,
 						targets: config.browsersList,
 						useBuiltIns: 'usage'
 					}
 				]
 			]
-		}), resolve({
-			jsnext: true,
-			preferBuiltins: true,
-			browser: true
 		}), convertCJS()
 	],
 	output: {
