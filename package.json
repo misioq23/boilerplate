@@ -1,6 +1,6 @@
 {
 	"name": "boilerplate",
-	"version": "1.1.0",
+	"version": "1.2.0",
 	"description": "boilerplate with json-server",
 	"main": "src/scripts/index.js",
 	"devDependencies": {
@@ -22,7 +22,6 @@
 		"karma-mocha-reporter": "^2.2.5",
 		"karma-rollup-preprocessor": "^7.0.0",
 		"karma-sinon-chai": "^2.0.2",
-		"lolex": "^3.1.0",
 		"mocha": "^6.0.2",
 		"rollup": "^1.6.0",
 		"rollup-plugin-babel": "^4.3.2",
@@ -33,13 +32,10 @@
 		"sinon-chai": "^3.3.0"
 	},
 	"scripts": {
-		"karma": "karma start ./config/karma/default.js --single-run",
-		"karma:rollup": "karma start ./config/karma/karmaRollup.js",
+		"karma": "karma start ./config/karma/karma.conf.js",
 		"lint": "eslint -c config/eslint/default.json src/**/*.js",
-		"build": "npm run lint && rollup -c config/rollup/default.js",
-		"server": "json-server --watch config/server/db.json --port 8080",
-		"pretest": "npm run build",
-		"test": "npm run karma"
+		"build": "rollup -c config/rollup/default.js",
+		"server": "json-server --watch config/server/db.json --port 8080"
 	},
 	"author": "misioq23",
 	"license": "MIT",

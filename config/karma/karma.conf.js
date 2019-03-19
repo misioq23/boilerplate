@@ -1,5 +1,3 @@
-// Karma configuration
-// Generated on Mon Mar 11 2019 20:50:45 GMT+0100 (GMT+01:00)
 const babel = require('rollup-plugin-babel');
 const replace = require('rollup-plugin-replace');
 const resolve = require('rollup-plugin-node-resolve');
@@ -14,19 +12,20 @@ module.exports = function (config) {
 			'karma-rollup-preprocessor',
 			'karma-sinon-chai',
 		],
+		failOnEmptyTestSuite: false,
 		frameworks: ['mocha', 'sinon-chai'],
 		browsers: ['ChromeHeadless'],
 		reporters: ['mocha', 'coverage'],
-		failOnEmptyTestSuite: false,
-
+		coverageReporter: {
+			type: 'text-summary'
+		},
 		basePath: '../../',
-		files: [{ pattern: 'test/*.js', watched: false }],
+		files: ['test/*.js'],
 		exclude: [],
 
 		preprocessors: {
 			'test/*.js': ['rollup', 'coverage']
 		},
-
 		rollupPreprocessor: {
 			plugins: [
 				replace({
@@ -55,13 +54,9 @@ module.exports = function (config) {
 		},
 		port: 9876,
 		colors: true,
-		logLevel: config.LOG_ERROR,
 		autoWatch: false,
 		singleRun: true,
+		logLevel: config.LOG_ERROR,
 		concurrency: Infinity,
-
-		coverageReporter: {
-			type: 'text-summary'
-		}
 	})
 }

@@ -1,10 +1,10 @@
 import { Server } from 'karma';
 const karma = (done) => {
 	new Server({
-		configFile: require('path').resolve('./config/karma/karmaRollup.js'),
+		configFile: require('path').resolve('./config/karma/karma.conf.js'),
 	}, (err) => {
 		if (err) {
-			done('Karma error!');
+			done('Test error!');
 		} else {
 			done();
 		}
