@@ -2,13 +2,12 @@ import { rollup } from 'rollup';
 
 import configRollup from '../rollup/default';
 
-const jsBundle = () => {
-	return rollup({
+const jsBundle = async () => {
+	const bundle = await rollup({
 		input: configRollup.input,
 		plugins: configRollup.plugins
-	}).then((bundle) => {
-		return bundle.write(configRollup.output);
 	});
+	return bundle.write(configRollup.output);
 };
 
 export default jsBundle;
