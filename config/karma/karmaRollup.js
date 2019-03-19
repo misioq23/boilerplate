@@ -7,12 +7,12 @@ const convertCJS = require('rollup-plugin-commonjs');
 module.exports = function (config) {
 	config.set({
 		plugins: [
-			'karma-mocha',
-			'karma-sinon-chai',
-			"karma-mocha-reporter",
-			'karma-coverage',
 			'karma-chrome-launcher',
-			require("./lib")
+			'karma-coverage',
+			'karma-mocha',
+			'karma-mocha-reporter',
+			'karma-rollup-preprocessor',
+			'karma-sinon-chai',
 		],
 		frameworks: ['mocha', 'sinon-chai'],
 		browsers: ['ChromeHeadless'],
@@ -20,7 +20,7 @@ module.exports = function (config) {
 		failOnEmptyTestSuite: false,
 
 		basePath: '../../',
-		files: [{ pattern: "test/*.js", watched: false }],
+		files: [{ pattern: 'test/*.js', watched: false }],
 		exclude: [],
 
 		preprocessors: {
