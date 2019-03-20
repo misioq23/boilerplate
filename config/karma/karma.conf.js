@@ -17,7 +17,12 @@ module.exports = function (config) {
 		browsers: ['ChromeHeadless'],
 		reporters: ['mocha', 'coverage'],
 		coverageReporter: {
-			type: 'text-summary'
+			includeAllSources: true,
+			dir: 'coverage/',
+			reporters: [
+				{ type: "html", subdir: "html" },
+				{ type: 'text-summary' }
+			]
 		},
 		basePath: '../../',
 		files: ['test/*.js'],
@@ -48,8 +53,8 @@ module.exports = function (config) {
 				}), convertCJS()
 			],
 			output: {
-				sourcemap: true,
-				format: 'iife'
+				sourcemap: 'inline',
+				format: 'cjs'
 			}
 		},
 		port: 9876,
