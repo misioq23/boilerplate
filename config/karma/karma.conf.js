@@ -2,6 +2,7 @@ const babel = require('rollup-plugin-babel');
 const replace = require('rollup-plugin-replace');
 const resolve = require('rollup-plugin-node-resolve');
 const convertCJS = require('rollup-plugin-commonjs');
+const istanbul = require('rollup-plugin-istanbul');
 module.exports = function (config) {
 	config.set({
 		plugins: [
@@ -29,28 +30,25 @@ module.exports = function (config) {
 		exclude: [],
 
 		preprocessors: {
-			'test/*.js': ['rollup', 'coverage']
+			'test/*.js': ['rollup']
 		},
 		rollupPreprocessor: {
 			plugins: [
 				replace({
 					'process.env.NODE_ENV': '"production"',
-				}), babel({
-					exclude: 'node_modules/**',
-					babelrc: false,
-					presets: [
-						['@babel/env',
-							{
-								targets: ['chrome > 70'],
-								useBuiltIns: 'usage'
-							}
-						]
-					]
 				}), resolve({
 					jsnext: true,
 					preferBuiltins: true,
 					browser: true
-				}), convertCJS()
+				}), babel({
+					exclude: 'node_modules/**',
+					babelrc: false,
+					presets: [['@babel/env']]
+				}),
+				istanbul({
+					exclude: ['test/*.js']
+				}),
+				convertCJS()
 			],
 			output: {
 				sourcemap: 'inline',
