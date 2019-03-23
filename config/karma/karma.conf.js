@@ -2,7 +2,6 @@ const babel = require('rollup-plugin-babel');
 const replace = require('rollup-plugin-replace');
 const resolve = require('rollup-plugin-node-resolve');
 const convertCJS = require('rollup-plugin-commonjs');
-const istanbul = require('rollup-plugin-istanbul');
 module.exports = function (config) {
 	config.set({
 		plugins: [
@@ -43,10 +42,8 @@ module.exports = function (config) {
 				}), babel({
 					exclude: 'node_modules/**',
 					babelrc: false,
-					presets: [['@babel/env']]
-				}),
-				istanbul({
-					exclude: ['test/*.js']
+					presets: ['@babel/env'],
+					plugins: ['istanbul']
 				}),
 				convertCJS()
 			],
