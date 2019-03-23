@@ -9,4 +9,4 @@ export default (err, bs) => {
 	server.use(jsonServer.router(config.json.dir));
 
 	bs.app.use(server);
-}
+};

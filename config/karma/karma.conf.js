@@ -2,7 +2,7 @@ const babel = require('rollup-plugin-babel');
 const replace = require('rollup-plugin-replace');
 const resolve = require('rollup-plugin-node-resolve');
 const convertCJS = require('rollup-plugin-commonjs');
-module.exports = function (config) {
+module.exports = (config) => {
 	config.set({
 		plugins: [
 			'karma-chrome-launcher',
@@ -17,17 +17,15 @@ module.exports = function (config) {
 		browsers: ['ChromeHeadless'],
 		reporters: ['mocha', 'coverage'],
 		coverageReporter: {
-			includeAllSources: true,
+			includeAllSources: false,
 			dir: 'coverage/',
 			reporters: [
-				{ type: "html", subdir: "html" },
+				{ type: 'html', subdir: 'html' },
 				{ type: 'text-summary' }
 			]
 		},
 		basePath: '../../',
 		files: ['test/*.js'],
-		exclude: [],
-
 		preprocessors: {
 			'test/*.js': ['rollup']
 		},
@@ -58,5 +56,5 @@ module.exports = function (config) {
 		singleRun: true,
 		logLevel: config.LOG_ERROR,
 		concurrency: Infinity,
-	})
-}
+	});
+};

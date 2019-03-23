@@ -16,6 +16,7 @@ export default {
 		html: 'src/markup/*.html',
 		scss: 'src/scss/**/**/*.scss',
 		js: 'src/scripts/**/*.js',
+		tests: 'test/**/*.js',
 		img: 'src/images/*.{jpg,svg,png}',
 	},
 

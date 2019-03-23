@@ -7,18 +7,18 @@ import config from '../config';
 const browserSync = (done) => {
 	browsersync.init(config.serv);
 	done();
-}
+};
 
-//BrowserSync with JSON
+// BrowserSync with JSON
 const browserSyncJSON = (done) => {
 	browsersync.init(config.serv, jsonServ);
 	done();
-}
+};
 
 // BrowserSync Reload
 const browserSyncReload = (done) => {
 	browsersync.reload();
 	done();
-}
+};
 
-export { browserSyncJSON, browserSync, browserSyncReload }
+export { browserSyncJSON, browserSync, browserSyncReload };
