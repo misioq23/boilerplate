@@ -1,13 +1,14 @@
 import { rollup } from 'rollup';
+import configRollup from '../rollup/rollup.config';
 
-import configRollup from '../rollup/default';
+const input = {
+	input: configRollup.input,
+	plugins: configRollup.plugins
+};
 
-const jsBundle = async () => {
-	const bundle = await rollup({
-		input: configRollup.input,
-		plugins: configRollup.plugins
-	});
+const rollupBundle = async () => {
+	const bundle = await rollup(input);
 	return bundle.write(configRollup.output);
 };
 
-export default jsBundle;
+export default rollupBundle;

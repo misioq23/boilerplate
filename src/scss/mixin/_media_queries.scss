@@ -1,0 +1,22 @@
+@import '../base';
+
+@mixin for-tablet-portrait-up {
+	@media ($mq-sm) {
+		@content;
+	}
+}
+@mixin for-tablet-landscape-up {
+	@media ($mq-md) {
+		@content;
+	}
+}
+@mixin for-desktop-up {
+	@media ($mq-lg) {
+		@content;
+	}
+}
+@mixin for-big-desktop-up {
+	@media ($mq-xl) {
+		@content;
+	}
+}

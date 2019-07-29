@@ -1,0 +1,25 @@
+@import "mixins/media_queries";
+
+$border: 1px;
+
+html {
+    border-width: $border;
+    border-style: solid;
+    border-color: blue;
+
+    @include for-tablet-portrait-up {
+        border-color: orange;
+    }
+
+    @include for-tablet-landscape-up {
+        border-color: purple;
+    }
+
+    @include for-desktop-up {
+        border-color: yellow;
+    }
+
+    @include for-big-desktop-up {
+        border-color: red;
+    }
+}

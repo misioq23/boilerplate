@@ -1,6 +1,3 @@
-@import "base";
-
-@import "resets/r_border_box";
-@import "resets/r_global";
-@import "resets/r_typography.scss";
-@import "resets/r_outline.scss";
+@import './base';
+@import './mixin/media_queries';
+@import './global/border_box';

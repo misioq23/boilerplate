@@ -1,5 +1,7 @@
 node_modules/
-dist/
 build/
+docs/
 package-lock.json
-coverage/
+
+# config/
+# gulpfile.esm.js
