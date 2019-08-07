@@ -1,9 +1,9 @@
-import { src, dest } from 'gulp';
+import { src, dest, lastRun } from 'gulp';
 import htmlmin from 'gulp-htmlmin';
 import config from '../config';
 
 const htmlBuild = () => {
-	return src(config.src.html)
+	return src(config.src.html, { since: lastRun(htmlBuild) })
 		.pipe(dest(config.build.html));
 };
 

@@ -1,4 +1,4 @@
-import { src, dest } from 'gulp';
+import { src, dest, lastRun } from 'gulp';
 import sass from 'gulp-sass';
 import autoprefixer from 'gulp-autoprefixer';
 import sourcemaps from 'gulp-sourcemaps';
@@ -6,7 +6,7 @@ import cleanCSS from 'gulp-clean-css';
 import config from '../config';
 
 const cssBuild = () => {
-	return src(config.src.scss)
+	return src(config.src.scss, { since: lastRun(cssBuild) })
 		.pipe(sourcemaps.init())
 		.pipe(sass().on('error', sass.logError))
 		.pipe(autoprefixer({
