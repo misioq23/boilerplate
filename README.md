@@ -10,6 +10,7 @@
 * To make some changes in directory paths or server setup, open: `./config/config.js` file.
 * To change linter rules go to: `./config/eslint/.eslintrc.json` file.
 * To prevent adding polyfills go to: `./config/rollup/rollup.config.js` file and set in babel presets `useBuiltIns: false`
+* To chose list of supported browsers go to ./package.json and look for browsersList. [More info](https://github.com/browserslist/browserslist).
 
 ## Available Scripts
 
@@ -26,7 +27,7 @@ You will also see any errors in the console.
 
 Gulp instantly build dist version of app. Used for deployment.
 
-> **NOTE:** *Shorter version with globally installed gulp: gulp build*
+> **NOTE:** *Work same as: gulp build*
 
 ### `npm run bundle`
 
