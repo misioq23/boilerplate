@@ -1,4 +1,5 @@
 import { src, dest } from 'gulp';
+import htmlmin from 'gulp-htmlmin';
 import config from '../config';
 
 const htmlBuild = () => {
@@ -6,4 +7,10 @@ const htmlBuild = () => {
 		.pipe(dest(config.build.html));
 };
 
-export default htmlBuild;
+const htmlDist = () => {
+	return src(config.src.html)
+		.pipe(htmlmin({ collapseWhitespace: true }))
+		.pipe(dest(config.dist.html));
+};
+
+export { htmlBuild, htmlDist };

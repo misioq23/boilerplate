@@ -1,13 +1,14 @@
 {
 	"name": "boilerplate",
 	"description": "my boilerplate based on gulp, rollup, babel and esLint",
-	"version": "1.5.0",
+	"version": "1.6.0",
 	"author": "misioq23",
 	"license": "MIT",
 	"repository": "https://github.com/misioq23/boilerplate",
 	"scripts": {
 		"start": "gulp",
-		"build": "rollup -c config/rollup/rollup.config.js"
+		"build": "gulp build",
+		"bundle": "rollup -c config/rollup/rollup.config.js"
 	},
 	"browserslist": [
 		"chrome > 74"
@@ -19,9 +20,12 @@
 		"esm": "^3.2.25",
 		"gulp": "^4.0.2",
 		"gulp-autoprefixer": "^6.1.0",
+		"gulp-clean-css": "^4.2.0",
 		"gulp-eslint": "^6.0.0",
+		"gulp-htmlmin": "^5.0.1",
 		"gulp-sass": "^4.0.2",
 		"gulp-sourcemaps": "^2.6.5",
+		"gulp-terser": "^1.2.0",
 		"rollup": "^1.17.0",
 		"rollup-plugin-babel": "^4.3.3",
 		"rollup-plugin-commonjs": "^10.0.1",

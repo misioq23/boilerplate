@@ -6,4 +6,9 @@ const assetsBuild = () => {
 		.pipe(dest(config.build.assets));
 };
 
-export default assetsBuild;
+const assetsDist = () => {
+	return src(`${config.build.assets}**/*.{jpg,svg,png,ico}`)
+		.pipe(dest(config.dist.assets));
+};
+
+export { assetsBuild, assetsDist };

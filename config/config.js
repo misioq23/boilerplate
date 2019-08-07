@@ -16,9 +16,16 @@ const config = {
 
 	build: {
 		html: 'build/',
-		css: 'build/css',
+		css: 'build/css/',
 		js: 'build/js/',
 		assets: 'build/assets/',
+	},
+
+	dist: {
+		html: 'dist/',
+		css: 'dist/css/',
+		js: 'dist/js/',
+		assets: 'dist/assets/',
 	},
 
 	rollup: {

@@ -1,4 +1,4 @@
-# Boilerplate v.1.5.0
+# Boilerplate v.1.6.0
 
 ## Instalation
 
@@ -23,5 +23,11 @@ You will also see any errors in the console.
 > **NOTE:** *If you have gulp CLI installed globally you don't have to write this command. Just type gulp.*
 
 ### `npm run build`
+
+Gulp instantly build dist version of app. Used for deployment.
+
+> **NOTE:** *Shorter version with globally installed gulp: gulp build*
+
+### `npm run bundle`
 
 If you want to instant bundle your src javascript files. 
