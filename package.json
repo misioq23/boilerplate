@@ -5,6 +5,28 @@
 	"author": "misioq23",
 	"license": "MIT",
 	"repository": "https://github.com/misioq23/boilerplate",
+	"dependencies": {
+		"core-js": "^3.6.1"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.7.7",
+		"@babel/preset-env": "^7.7.7",
+		"browser-sync": "^2.26.7",
+		"esm": "^3.2.25",
+		"gulp": "^4.0.2",
+		"gulp-autoprefixer": "^7.0.1",
+		"gulp-clean-css": "^4.2.0",
+		"gulp-eslint": "^6.0.0",
+		"gulp-htmlmin": "^5.0.1",
+		"gulp-sass": "^4.0.2",
+		"gulp-sourcemaps": "^2.6.5",
+		"gulp-terser": "^1.2.0",
+		"rollup": "^1.27.14",
+		"rollup-plugin-babel": "^4.3.3",
+		"rollup-plugin-commonjs": "^10.1.0",
+		"rollup-plugin-node-resolve": "^5.2.0",
+		"rollup-plugin-replace": "^2.2.0"
+	},
 	"scripts": {
 		"start": "gulp",
 		"build": "gulp build",
@@ -12,27 +34,5 @@
 	},
 	"browserslist": [
 		"chrome > 74"
-	],
-	"devDependencies": {
-		"@babel/core": "^7.5.4",
-		"@babel/preset-env": "^7.5.4",
-		"browser-sync": "^2.26.7",
-		"esm": "^3.2.25",
-		"gulp": "^4.0.2",
-		"gulp-autoprefixer": "^6.1.0",
-		"gulp-clean-css": "^4.2.0",
-		"gulp-eslint": "^6.0.0",
-		"gulp-htmlmin": "^5.0.1",
-		"gulp-sass": "^4.0.2",
-		"gulp-sourcemaps": "^2.6.5",
-		"gulp-terser": "^1.2.0",
-		"rollup": "^1.19.4",
-		"rollup-plugin-babel": "^4.3.3",
-		"rollup-plugin-commonjs": "^10.0.2",
-		"rollup-plugin-node-resolve": "^5.2.0",
-		"rollup-plugin-replace": "^2.2.0"
-	},
-	"dependencies": {
-		"core-js": "^3.1.4"
-	}
+	]
 }
