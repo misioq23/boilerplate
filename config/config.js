@@ -1,9 +1,9 @@
 const config = {
 	server: {
 		server: {
-			baseDir: 'build/'
+			baseDir: 'build/',
 		},
-		port: 3000
+		port: 3000,
 	},
 
 	src: {
@@ -31,8 +31,8 @@ const config = {
 	rollup: {
 		input: 'src/js/index.js',
 		output: 'build/js/bundle.js',
-		bundleFormat: 'iife'
-	}
+		bundleFormat: 'iife',
+	},
 };
 
 export default config;

@@ -6,7 +6,7 @@ import config from '../config';
 
 const input = {
 	input: configRollup.input,
-	plugins: configRollup.plugins
+	plugins: configRollup.plugins,
 };
 
 const rollupBundle = async () => {
@@ -14,10 +14,9 @@ const rollupBundle = async () => {
 	return bundle.write(configRollup.output);
 };
 
-const jsDist = () => {
-	return src(config.rollup.output)
+const jsDist = () =>
+	src(config.rollup.output)
 		.pipe(terser())
 		.pipe(dest(config.dist.js));
-}
 
 export { rollupBundle, jsDist };

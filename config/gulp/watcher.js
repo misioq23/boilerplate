@@ -6,7 +6,7 @@ import { rollupBundle } from './scripts';
 import esLint from './linter';
 import { assetsBuild } from './assets';
 import config from '../config';
-// Watch files
+
 const watchFiles = () => {
 	watch(config.src.html, series(htmlBuild, browserSyncReload));
 	watch(config.src.scss, series(cssBuild, browserSyncReload));

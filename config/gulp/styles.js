@@ -13,7 +13,7 @@ const cssBuild = () =>
 			autoprefixer({
 				cascade: false,
 				grid: 'no-autoplace',
-			})
+			}),
 		)
 		.pipe(sourcemaps.write())
 		.pipe(dest(config.build.css));

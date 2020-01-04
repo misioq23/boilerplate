@@ -5,8 +5,8 @@ import { assetsBuild, assetsDist } from './assets';
 import { cssBuild, cssDist } from './styles';
 
 export default parallel(
-	series(htmlBuild, htmlDist), 
+	series(htmlBuild, htmlDist),
 	series(cssBuild, cssDist),
-	series(rollupBundle, jsDist), 
-	series(assetsBuild, assetsDist)
+	series(rollupBundle, jsDist),
+	series(assetsBuild, assetsDist),
 );

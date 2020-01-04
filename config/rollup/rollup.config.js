@@ -9,35 +9,30 @@ const rollupConfig = {
 	output: {
 		file: config.rollup.output,
 		format: config.rollup.bundleFormat,
-		sourcemap: true
+		sourcemap: true,
 	},
 	plugins: [
-		replace(
-			{
-				'process.env.NODE_ENV': '"production"',
-			}
-		),
-		resolve(
-			{
-				mainFields: ['jsnext'],
-				browser: true
-			}
-		),
-		babel(
-			{
-				exclude: 'node_modules/**',
-				presets: [
-					['@babel/preset-env',
-						{
-							debug: false,
-							useBuiltIns: 'usage',
-							corejs: { version: 3, proposals: true }
-						}
-					]
-				]
-			}
-		),
-		commonjs()
+		replace({
+			'process.env.NODE_ENV': '"production"',
+		}),
+		resolve({
+			mainFields: ['jsnext'],
+			browser: true,
+		}),
+		babel({
+			exclude: 'node_modules/**',
+			presets: [
+				[
+					'@babel/preset-env',
+					{
+						debug: false,
+						useBuiltIns: 'usage',
+						corejs: { version: 3, proposals: true },
+					},
+				],
+			],
+		}),
+		commonjs(),
 	],
 };
 

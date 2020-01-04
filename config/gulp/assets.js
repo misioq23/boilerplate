@@ -6,7 +6,7 @@ const assetsBuild = () =>
 
 const assetsDist = () =>
 	src(`${config.build.assets}**/*.{jpg,svg,png,ico}`).pipe(
-		dest(config.dist.assets)
+		dest(config.dist.assets),
 	);
 
 export { assetsBuild, assetsDist };
