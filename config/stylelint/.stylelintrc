@@ -1,9 +1,14 @@
 {
+	 "plugins": [
+    "stylelint-scss"
+  ],
   "extends": "stylelint-config-standard",
 	"rules": { 
 		"declaration-empty-line-before": "never",
 		"indentation": "tab",
 		"linebreaks": "unix",
-		"selector-combinator-space-before": "never"
+		"selector-combinator-space-before": "never",
+		"at-rule-no-unknown": null,
+		"scss/at-rule-no-unknown": true
 	}
 }
