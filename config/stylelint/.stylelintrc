@@ -1,0 +1,9 @@
+{
+  "extends": "stylelint-config-standard",
+	"rules": { 
+		"declaration-empty-line-before": "never",
+		"indentation": "tab",
+		"linebreaks": "unix",
+		"selector-combinator-space-before": "never"
+	}
+}
