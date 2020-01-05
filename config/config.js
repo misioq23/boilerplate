@@ -10,7 +10,7 @@ const config = {
 		html: 'src/*.html',
 		scss: 'src/scss/**/**/*.scss',
 		js: 'src/js/**/*.js',
-		assets: 'src/assets/**/*.{jpg,svg,png,ico}',
+		assets: 'src/assets/',
 		test: 'test/**/*.js',
 	},
 
