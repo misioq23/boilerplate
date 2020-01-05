@@ -3,3 +3,6 @@ build/
 dist/
 docs/
 package-lock.json
+
+# Local Netlify folder
+.netlify
