@@ -6,6 +6,7 @@
 	"license": "MIT",
 	"repository": "https://github.com/misioq23/boilerplate",
 	"devDependencies": {
+		"@babel/eslint-plugin": "^7.11.5",
 		"@babel/preset-env": "^7.11.5",
 		"@rollup/plugin-babel": "^5.2.1",
 		"@rollup/plugin-commonjs": "^15.1.0",
@@ -13,9 +14,11 @@
 		"browser-sync": "^2.26.7",
 		"core-js": "^3.6.5",
 		"del": "^5.1.0",
-		"eslint": "^6.8.0",
-		"eslint-config-prettier": "^6.9.0",
-		"eslint-plugin-prettier": "^3.1.2",
+		"eslint": "^7.9.0",
+		"eslint-config-airbnb-base": "^14.2.0",
+		"eslint-config-prettier": "^6.11.0",
+		"eslint-plugin-import": "^2.22.0",
+		"eslint-plugin-prettier": "^3.1.4",
 		"esm": "^3.2.25",
 		"gulp": "^4.0.2",
 		"gulp-autoprefixer": "^7.0.1",
@@ -26,7 +29,7 @@
 		"gulp-terser": "^1.2.0",
 		"husky": "^3.1.0",
 		"lint-staged": "^9.5.0",
-		"prettier": "^1.19.1",
+		"prettier": "^2.1.2",
 		"rollup": "^2.28.1",
 		"stylelint": "^13.7.1",
 		"stylelint-config-property-sort-order-smacss": "^6.3.0",
@@ -36,7 +39,7 @@
 		"start": "gulp",
 		"build": "gulp build",
 		"bundle": "rollup -c config/rollup/rollup.config.js",
-		"lint:js": "eslint \"src/js/**\" --config config/eslint/.eslintrc.json --fix",
+		"lint:js": "eslint \"src/js/**\" --config config/eslint/.eslintrc --fix",
 		"lint:css": "stylelint \"src/scss/**\" --config config/stylelint/.stylelintrc --fix"
 	},
 	"browserslist": [
@@ -50,7 +53,7 @@
 	},
 	"lint-staged": {
 		"*.js": [
-			"eslint --config config/eslint/.eslintrc.json --fix",
+			"eslint --config config/eslint/.eslintrc --fix",
 			"git add"
 		],
 		"*.{css,scss}": [

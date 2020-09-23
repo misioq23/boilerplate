@@ -1,0 +1,33 @@
+{
+  "extends": [
+		"airbnb-base",
+		"prettier"
+	],
+	"plugins": [
+		"prettier",
+		"@babel"
+	],
+  "globals": {
+    "window": true,
+    "document": true
+	},
+  "rules": {
+		"arrow-parens": [ 2, "as-needed" ],
+		"no-confusing-arrow": 0,
+		"indent": [2, "tab"],
+		"no-tabs": [ 2, { "allowIndentationTabs": true } ],
+		"object-curly-newline": 0
+	},
+	"settings": {
+		"import/resolver": {
+			"node": {
+				"paths": [
+					"./src"
+				],
+				"extensions": [
+					".js"
+				]
+			}
+		}
+	}
+}
