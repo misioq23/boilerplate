@@ -5,8 +5,12 @@
 	],
 	"plugins": [
 		"prettier",
-		"@babel"
+		"@babel",
+		"jest"
 	],
+	"env": {
+		"jest/globals": true
+	},
   "globals": {
     "window": true,
     "document": true
