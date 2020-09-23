@@ -1,7 +1,6 @@
-import babel from 'rollup-plugin-babel';
-import replace from 'rollup-plugin-replace';
-import resolve from 'rollup-plugin-node-resolve';
-import commonjs from 'rollup-plugin-commonjs';
+import babel from '@rollup/plugin-babel';
+import resolve from '@rollup/plugin-node-resolve';
+import commonjs from '@rollup/plugin-commonjs';
 import config from '../config';
 
 const rollupConfig = {
@@ -12,15 +11,10 @@ const rollupConfig = {
 		sourcemap: true,
 	},
 	plugins: [
-		replace({
-			'process.env.NODE_ENV': '"production"',
-		}),
-		resolve({
-			mainFields: ['jsnext'],
-			browser: true,
-		}),
+		resolve(),
 		babel({
 			exclude: 'node_modules/**',
+			babelHelpers: 'bundled',
 			presets: [
 				[
 					'@babel/preset-env',
