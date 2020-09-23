@@ -4,9 +4,11 @@ import { htmlBuild } from './markup';
 import { cssBuild } from './styles';
 import { rollupBundle } from './scripts';
 import { assetsBuild } from './assets';
+import prebuild from './prebuild';
 import config from '../config';
 
 const watchFiles = () => {
+	prebuild();
 	watch(config.src.html, series(htmlBuild, browserSyncReload));
 	watch(config.src.scss, series(cssBuild, browserSyncReload));
 	watch(config.src.js, series(rollupBundle, browserSyncReload));
